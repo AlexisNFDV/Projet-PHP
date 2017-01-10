@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=b1a_ingesup;host=127.0.0.1';
+$dsn = 'mysql:dbname=projet-php;host=127.0.0.1';
 $user = 'root';
 $password = '';
 

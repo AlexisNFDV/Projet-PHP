@@ -20,14 +20,7 @@ footer > .copyright
     max-width: 50%;
 }
 
-#ent {
-    font-family: "RoadRage";
-    color: white;;
-
-}
-@font-face
-{
-    font-family: "RoadRage";
-    src: url("RoadRage.otf");
+#ent{
+    color: white;
 }
 

@@ -24,60 +24,71 @@ require 'connect.php';
 <header>
 
 </header>
-<h1 class="text-center ent">8GAG</h1>
-<div class="">
+
+<div class="container">
+    <h1 class="text-center ent">8GAG</h1>
     <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5 col-lg-offset-1">
+        <div class="col-md-3  col-sm-4 col-xs-12">
             <div class="thumbnail">
                 <img class="img" src="Image/pp.jpg" alt="...">
                 <div class="caption">
                     <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam. Accusamus ad atque eius</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam.
+                        Accusamus ad atque eius</p>
+                    <p><a href="#" class="btn btn-default" role="button">Modifier</a> <a href="#" class="btn btn-danger"
+                                                                                         role="button">Delete</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
+        <div class=" col-md-3 col-sm-4 col-xs-12">
             <div class="thumbnail">
                 <img class="img" src="Image/pp.jpg" alt="...">
                 <div class="caption">
                     <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam. Accusamus ad atque eius</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam.
+                        Accusamus ad atque eius</p>
+                    <p><a href="#" class="btn btn-default" role="button">Modifier</a> <a href="#" class="btn btn-danger"
+                                                                                         role="button">Delete</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
+        <div class=" col-md-3 col-sm-4 col-xs-12">
             <div class="thumbnail">
                 <img class="img" src="Image/pp.jpg" alt="...">
                 <div class="caption">
                     <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam. Accusamus ad atque eius</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam.
+                        Accusamus ad atque eius</p>
+                    <p><a href="#" class="btn btn-default" role="button">Modifier</a> <a href="#" class="btn btn-danger"
+                                                                                         role="button">Delete</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
+        <div class=" col-md-3 col-sm-4 col-xs-12">
             <div class="thumbnail">
                 <img class="img" src="Image/pp.jpg" alt="...">
                 <div class="caption">
                     <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam. Accusamus ad atque eius</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam.
+                        Accusamus ad atque eius</p>
+                    <p><a href="#" class="btn btn-default" role="button">Modifier</a> <a href="#" class="btn btn-danger"
+                                                                                         role="button">Delete</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
+        <div class="col-md-3 col-sm-4 col-xs-12">
             <div class="thumbnail">
-                <img class="img" src="Image/pp.jpg" alt="...">
+                <img class="img" src="Image/add.png" alt="...">
                 <div class="caption">
                     <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam. Accusamus ad atque eius</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt quae quisquam.
+                        Accusamus ad atque eius</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Image</a></p>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <footer>
     <p class="copyright"> © Copyright 2016 </p>
@@ -86,6 +97,7 @@ require 'connect.php';
 </body>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
 </html>

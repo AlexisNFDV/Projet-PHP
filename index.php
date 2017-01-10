@@ -24,7 +24,7 @@ require 'connect.php';
         <header>
 
         </header>
-
+    <h1 class="=container">8GAG</h1>
 
         <footer>
             <p class="copyright"> © Copyright 2016 </p>

@@ -16,8 +16,9 @@ footer > .copyright
 {
     margin-top: 20px;
     padding-left: 7%;
-    color: white;
+    color: #ffffff;
     max-width: 50%;
+<<<<<<< HEAD
     font-size: 17px;
 }
 
@@ -28,4 +29,22 @@ footer > .copyright
     right: 4.5%;
     color: white;
     font-size:18px;
+=======
+}
+
+
+.ent{
+    font-family: 'Orbitron', cursive;
+    font-size: 400%;
+    padding-bottom: 3%;
+}
+
+.img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.row{
+    margin: 0%;
+>>>>>>> 41d9982d2d25da388cd1e2a211d25763e742c3d1
 }

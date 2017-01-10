@@ -5,7 +5,7 @@ body {
 
 footer
 {
-    position: fixed;
+    position: absolute;
     background: rgba(63, 63, 83, 0.9);
     color: black;
     width: 100%;
@@ -18,4 +18,14 @@ footer > .copyright
     padding-left: 7%;
     color: white;
     max-width: 50%;
+    font-size: 17px;
+}
+
+#contact
+{
+    position: absolute;
+    top: 30%;
+    right: 4.5%;
+    color: white;
+    font-size:18px;
 }

@@ -16,11 +16,22 @@ footer > .copyright
 {
     margin-top: 20px;
     padding-left: 7%;
-    color: white;
+    color: #ffffff;
     max-width: 50%;
 }
 
-#ent{
-    color: white;
+
+.ent{
+    font-family: 'Orbitron', cursive;
+    font-size: 400%;
+    padding-bottom: 3%;
 }
 
+.img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.row{
+    margin: 0%;
+}

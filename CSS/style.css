@@ -2,3 +2,20 @@ body {
     background-image:url(../Image/background.png);
     background-repeat: repeat;
 }
+
+footer
+{
+    position: fixed;
+    background: rgba(63, 63, 83, 0.9);
+    color: black;
+    width: 100%;
+    bottom: 0;
+}
+
+footer > .copyright
+{
+    margin-top: 20px;
+    padding-left: 7%;
+    color: white;
+    max-width: 50%;
+}

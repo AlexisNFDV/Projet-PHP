@@ -11,15 +11,13 @@ require 'connect.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
 
-        <!--Police Google pour le titre -->
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-
     <title>8GAG</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
     <title>Document</title>
 </head>
@@ -102,9 +100,8 @@ require 'connect.php';
 
 </footer>
 
-<!--Bootstrap -->
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </body>
 </html>

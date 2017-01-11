@@ -3,25 +3,6 @@ body {
     background-repeat: repeat;
 }
 
-footer
-{
-    position: relative;
-    background: rgba(63, 63, 83, 0.9);
-    color: black;
-    width: 100%;
-    bottom: 0;
-    height: 50px;
-}
-
-footer > .copyright
-{
-    padding-top: 15px;
-    padding-left: 7%;
-    color: white;
-    max-width: 50%;
-    font-size: 15px;
-}
-
 #contact
 {
     position: absolute;
@@ -31,6 +12,9 @@ footer > .copyright
     font-size:18px;
 }
 
+#tyu {
+    font-family: 'Orbitron', cursive;
+}
 
 .ent{
     font-family: 'Orbitron', cursive;
@@ -41,8 +25,4 @@ footer > .copyright
 .img{
     max-width: 200px;
     max-height: 200px;
-}
-
-.row{
-    margin: 0%;
 }

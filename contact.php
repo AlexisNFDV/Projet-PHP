@@ -87,20 +87,49 @@ echo ('<p align="center"> Vous allez bientot etre redirigé vers la page d\'acce
 
 <form class="form-horizontal" action="" method="post">
     <div class="form-group">
+        <label for="nom" class="col-sm-2 control-label">Nom</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="nom" placeholder="Nom">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="sujet" class="col-sm-2 control-label">Sujet</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="sujet" placeholder="Sujet">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="3" placeholder="Votre message" id="message"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
             <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
         </div>
     </div>
+
     <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <label for="avis" class="col-sm-2 control-label">Notre site est : </label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            <select class="form-control" id="avis">
+                <option>Très bien</option>
+                <option>Bien</option>
+                <option>Améliorable</option>
+                <option>Mal fait</option>
+                <option>Très mal fait</option>
+            </select>
         </div>
     </div>
+
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
+            <button type="submit" class="btn btn-default">Envoyer</button>
         </div>
     </div>
 </form>

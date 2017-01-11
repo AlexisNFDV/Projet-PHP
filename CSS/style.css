@@ -5,7 +5,7 @@ body {
 
 footer
 {
-    position: absolute;
+    position: fixed;
     background: rgba(63, 63, 83, 0.9);
     color: black;
     width: 100%;

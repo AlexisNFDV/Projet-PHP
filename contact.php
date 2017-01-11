@@ -4,12 +4,12 @@ require 'connect.php';
 
 if (!empty($_POST['nom']) && !empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email'])){
 
-    $nom = $_POST['nom'];
+    /*$nom = $_POST['nom'];*/
     $sujet = $_POST['sujet'];
     $mess = $_POST['message'];
     $email = $_POST['email'];
 
-    $sms = $dbh->prepare("INSERT INTO contact (nom,sujet,message,email) VALUES (:nom, :sujet, :message, :email)");
+    /*$sms = $dbh->prepare("INSERT INTO contact (nom,sujet,message,email) VALUES (:nom, :sujet, :message, :email)");
     $sms->execute([':nom' => $nom, ':sujet' => $sujet, ':message' => $mess, ':email' => $email]);
     $sms->fetchAll();
 
@@ -17,17 +17,17 @@ if (!empty($_POST['nom']) && !empty($_POST['sujet']) && !empty($_POST['message']
 
     $envoi = $dbh->prepare("SELECT * FROM contact WHERE id = 1");
     $envoi->execute();
-    $envoi->fetchAll();
+    $envoi->fetchAll();*/
 
     $to = 'noel.a@hotmail.fr';
     $name = $nom;
     $subject = $sujet;
     $message = $mess;
-    $headers = 'From:'.$email ."\r\n" .
+    $headers = 'From: '.$email ."\r\n" .
         'Reply-To: alexdu77270@hotmail.fr'."\r\n".
         'X-Mailer: PHP/'.phpversion();
 
-    mail($to, $name, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);
 
     header('Location: index.php');
 

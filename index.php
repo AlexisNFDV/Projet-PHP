@@ -16,7 +16,15 @@ require 'connect.php';
     <link rel="stylesheet" href="CSS/style.css">
 
     <title>8GAG</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+    <title>Document</title>
 </head>
+
+<header>
+
+</header>
 
 <body>
 
@@ -92,12 +100,13 @@ require 'connect.php';
 
 </footer>
 
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+
 </body>
 </html>

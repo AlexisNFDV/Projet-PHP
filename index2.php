@@ -48,15 +48,24 @@ require 'connect.php';
         </div>
         <div class="col l3 ">
             <div class="center">
-            <a class="btn-floating btn-large waves-effect waves-light blue lighten-4"><i class="material-icons small">library_add</i></a>
+                <a class="btn-floating btn-large waves-effect waves-light blue lighten-4" href="#modal1"><i class="material-icons small">library_add</i></a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
 </body>
-
 <!--Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script>

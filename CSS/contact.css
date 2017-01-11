@@ -26,19 +26,8 @@ input{
     border-right: 1px solid #333;
     border-left: none;
     border-radius: 0 5px 5px 0;
-    background: #f4f5f6;
+    background: none;
     text-align: center;
-}
-
-label {
-    background: #333;
-    color: #f4f5f6;
-    margin-left: 5px;
-    margin-top:10px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    font-size: 18px;
-    line-height: 2.1;
 }
 
 input[type="submit"] {

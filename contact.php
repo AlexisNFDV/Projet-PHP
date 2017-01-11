@@ -65,32 +65,44 @@ echo ('<p align="center"> Vous allez bientot etre redirigé vers la page d\'acce
 <html class="no-js" lang="en">
 <head>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="Foundation/foundation-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="CSS/contact.css">
 
     <title>Contact</title>
 
 </head>
+
 <body>
+
 <header>
 
 </header>
 
-<form action="" method="post">
-    <label for="nom">Nom : </label>
-    <input type="text" name="nom" id="nom"><br>
-    <label for="sujet">Sujet : </label>
-    <input type="text" name="sujet" id="sujet"><br>
-    <label for="message">Message : </label>
-    <label>
-        <textarea placeholder="Ecrire un message" name="message" id="message"></textarea>
-    </label>
-    <label for="email">Adresse mail : </label>
-    <input type="email" name="email" id="email"><br>
-    <input type="submit" name="envoyer" id="envoyer" value="Envoyer !">
+<form class="form-horizontal" action="" method="post">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+    </div>
 </form>
 
 
@@ -98,6 +110,9 @@ echo ('<p align="center"> Vous allez bientot etre redirigé vers la page d\'acce
 <footer>
     <?php echo '<p class="copyright"> © Copyright 2016 </p>' ?>
 </footer>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

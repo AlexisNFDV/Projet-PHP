@@ -47,18 +47,39 @@ require 'connect.php';
             </div>
         </div>
         <div class="col l3 ">
-            <div class="center">
-                <a class="btn-floating btn-large waves-effect waves-light blue lighten-4" href="#modal1"><i class="material-icons small">library_add</i></a>
+            <button data-target="modal1" class="btn-floating btn-large waves-effect waves-light blue lighten-4"><i class="material-icons small">library_add</i></button>
+            <!--<a class="btn-floating btn-large waves-effect waves-light blue lighten-4" href="#modal1"><i class="material-icons small">library_add</i></a>-->
 
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4>Modal Header</h4>
-                        <p>A bunch of text</p>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="row">
+                    <div class="col l5 modal-content">
+                        <h4>Ajouter une image</h4>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <div>
+                        <a href="#!" class="col l5 modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                     </div>
+                </div>
+                <div class="row">
+                    <form action="#">
+                        <div class="input-field col l2">
+                            <input id="input_text" type="text" length="25">
+                            <label for="input_text">Input text</label>
+                        </div>
+                        <div class="input-field col l7">
+                            <textarea id="textarea1" class="materialize-textarea" length="150"></textarea>
+                            <label for="textarea1">Textarea</label>
+                        </div>
+                        <div class="col l3 file-field input-field">
+                            <div class="btn">
+                                <span>Image</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -69,7 +90,7 @@ require 'connect.php';
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">8GAG</h5>
+                <h5 id="tyu" class="white-text">8GAG</h5>
                 <p class="grey-text text-lighten-4">WebMaster Alexis Noel et Benoît Dillies.</p>
             </div>
             <div class="col l4 offset-l2 s12">
@@ -82,7 +103,7 @@ require 'connect.php';
     </div>
     <div class="footer-copyright grey darken-4">
         <div class="container">
-            © 2014 Copyright Text
+            © 2017 Copyright Text
             <a class="grey-text text-lighten-4 right" href="contact.php">Nous contactez</a>
         </div>
     </div>
@@ -90,11 +111,19 @@ require 'connect.php';
 
 </body>
 <!--Materialize -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script>
+    //initialisation des zoom pour les photos
     $(document).ready(function(){
         $('.materialboxed').materialbox();
     });
+    //Initialisation des modules
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
 </script>
 
 </html>

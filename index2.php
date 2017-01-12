@@ -37,21 +37,45 @@ require 'connect.php';
                     <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa fuga natus quis reiciendis sit tempore.
-                        Aperiam aut consequatur eos ipsam quas reicie</p>
+                    <div class="row">
+                        <div class="col l6">
+                            <p>Date d'ajout</p>
+                        </div>
+                        <div class="col l6">
+                            <p>10/01/2017</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <p>Résolution</p>
+                        </div>
+                        <div class="col l6">
+                            <p>200 x 200</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <p>Taille/type</p>
+                        </div>
+                        <div class="col l6">
+                            <p>50 MB/PNG</p>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="center card-action">
-                    <a class="waves-effect waves-light btn blue lighten-1"><i class="material-icons small">mode_edit</i></a>
-                    <a class="waves-effect waves-light btn red accent-3"><i class="material-icons small">delete</i></a>
+                    <a class="waves-effect waves-light btn blue lighten-1 tooltipped" data-position="bottom" data-delay="10" data-tooltip="Modifier"><i class="material-icons small">mode_edit</i></a>
+                    <a class="waves-effect waves-light btn red accent-3 tooltipped" data-position="bottom" data-delay="10" data-tooltip="Supression définitive!"><i class="material-icons small">delete</i></a>
                 </div>
             </div>
         </div>
-        <div class="col l3 ">
-            <button data-target="modal1" class="btn-floating btn-large waves-effect waves-light blue lighten-4"><i class="material-icons small">library_add</i></button>
-            <!--<a class="btn-floating btn-large waves-effect waves-light blue lighten-4" href="#modal1"><i class="material-icons small">library_add</i></a>-->
+        <div class="col l3">
+            <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" data-position="top" data-delay="10" data-tooltip="Ajouter une Image"><i class="material-icons small">library_add</i></a>
 
             <!-- Modal Structure -->
-            <div id="modal1" class="modal bottom-sheet">
+            <!--<div id="modal1" class="modal bottom-sheet">
                 <div class="row">
                     <div class="col l5 modal-content">
                         <h4>Ajouter une image</h4>
@@ -81,7 +105,7 @@ require 'connect.php';
                         </div>
                     </form>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

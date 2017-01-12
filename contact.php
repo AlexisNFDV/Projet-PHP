@@ -31,6 +31,9 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 
     <link rel="stylesheet" href="CSS/contact.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+
     <title>Contact</title>
 
 </head>
@@ -38,7 +41,7 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 <body>
 
 <header>
-
+    <h1 class="ent text-center">8GAG</h1>
 </header>
 
 <form class="form-horizontal" action="" method="post">

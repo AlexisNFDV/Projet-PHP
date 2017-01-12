@@ -2,6 +2,38 @@
 
 require 'connect.php';
 
+    if (!empty($_FILES['test'])) {
+
+    // echo $_FILES['ajout']['name'] . '<br>'; // Nom du fichier
+
+    $finfo = finfo_open(FILEINFO_MIME_TYPE); // Vérifie le type MIME du fichier
+    $mime = finfo_file($finfo, $_FILES['ajout']['tmp_name']); // Regarde dans ce fichier le type MIME
+    finfo_close($finfo); // Fermeture de la lecture
+
+    $filename = explode('.', $_FILES['ajout']['name']); // Explosion du nom sur le point
+    $extension = $filename[count($filename) - 1]; // L'extension du fichier
+
+
+    //echo $extension . ' ' . $mime;
+
+    if ($extension == 'jpg' && $mime == 'image/jpeg') {
+        move_uploaded_file($_FILES['ajout']['tmp_name'],
+            'Image/' . $_FILES['ajout']['name']);
+        $chemin = 'Image/' . $_FILES['ajout']['name'];
+        echo 'upload done';
+    } else {
+        echo 'format incorrect';
+    }
+
+
+    if (!empty($chemin)) {
+        $prod = $dbh->prepare("INSERT INTO image (nom,dates,résolution,taille,types) VALUES (:nom,:dates,:résolution,:taille,:types)");
+        $prod->execute([':nom' => $chemin]);
+        $new = $prod->fetchAll();
+        header('Location: index2.php');
+    }
+}
+
 ?>
 
 <!doctype html>
@@ -72,7 +104,14 @@ require 'connect.php';
             </div>
         </div>
         <div class="col l3">
-            <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" data-position="top" data-delay="10" data-tooltip="Ajouter une Image"><i class="material-icons small">library_add</i></a>
+            <form action="" method="post" enctype="multipart/form-data">
+                <label for="test">
+                    <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" data-position="top" data-delay="10" data-tooltip="Ajouter une Image" id="ajout" name="ajout">
+                        <i class="material-icons small">library_add</i>
+                    </a>
+                </label>
+                <input type="file" name="test" id="test" style="display: none">
+            </form>
 
             <!-- Modal Structure -->
             <!--<div id="modal1" class="modal bottom-sheet">

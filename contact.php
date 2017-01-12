@@ -13,7 +13,6 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 
      mail($to, $subject, $message, $headers);
     header('Location: index.php');
-
 }
 
 ?>

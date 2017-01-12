@@ -82,7 +82,7 @@ if (isset ($_GET['t'])) {
         <div class="col l3 offset-l3">
             <div class="card large">
                 <div class="card-image">
-                    <img class="materialboxed" data-caption="A picture of some deer and tons of trees" src="Image/pp.jpg">
+                    <img class="materialboxed" data-caption="Nom du fichier" src="Image/pp.jpg">
                     <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
@@ -120,48 +120,29 @@ if (isset ($_GET['t'])) {
                 </div>
             </div>
         </div>
-        <div class="col l3">
+        <div class="col l3 center">
             <form action="" method="post">
-                <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
+                <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
                     <i class="material-icons small">library_add</i>
                 </a>
-
-<<<<<<< HEAD
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal bottom-sheet">
-                <div class="row">
-                    <div class="col l5 modal-content">
-                        <h4>Ajouter une image</h4>
-                    </div>
-                    <div>
-                        <a href="#!" class="col l5 modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <form action="#">
-                        <div class="input-field col l2">
-                            <input id="input_text" type="text" length="25">
-                            <label for="input_text">Input text</label>
-=======
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal bottom-sheet">
-                    <div class="row">
-                        <div class="col l5 modal-content">
-                            <h4>Ajouter une image</h4>
->>>>>>> 5f3639b7b4e2951f768d6565e628cf40ff65364f
+                    <div class="container">
+                        <div class="modal-content">
+                            <h4 class="center">Ajouter une image</h4>
                         </div>
-                        <div>
-                            <a href="index2.php?t=1" class="col l5 modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col l3 file-field input-field">
-                            <div class="btn">
-                                <span>Image</span>
-                                <input type="file" name="test" id="test">
+                        <div class="row">
+                            <div class="col l4 offset-l2 file-field input-field mar">
+                                <div class="btn">
+                                    <span>Image</span>
+                                    <input class="blue lighten-1" type="file" name="test" id="test">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" name="belle" id="belle">
+                                </div>
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" name="belle" id="belle">
+                            <div class="col offset-l3">
+                                <a href="index2.php?t=1" class="modal-action modal-close waves-effect waves-green btn blue lighten-1">Ajouter</a>
                             </div>
                         </div>
                     </div>

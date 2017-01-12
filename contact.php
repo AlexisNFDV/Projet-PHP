@@ -41,7 +41,7 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 <body>
 
 <header>
-    <h1 class="ent">8GAG</h1>
+    <h1 class="ent text-center">8GAG</h1>
 </header>
 
 <form class="form-horizontal" action="" method="post">

@@ -75,7 +75,7 @@ require 'connect.php';
             <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" data-position="top" data-delay="10" data-tooltip="Ajouter une Image"><i class="material-icons small">library_add</i></a>
 
             <!-- Modal Structure -->
-            <!--<div id="modal1" class="modal bottom-sheet">
+            <div id="modal1" class="modal bottom-sheet">
                 <div class="row">
                     <div class="col l5 modal-content">
                         <h4>Ajouter une image</h4>

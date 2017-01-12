@@ -53,3 +53,9 @@ footer > .copyright
     max-width: 50%;
     font-size: 15px;
 }
+
+.ent {
+    font-family: 'Orbitron', cursive;
+    font-size: 400%;
+    margin-bottom: 6%;
+}

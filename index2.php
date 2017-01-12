@@ -5,23 +5,11 @@ ini_set('error_reporting', E_ALL);
 
 require 'connect.php';
 
-if (isset ($_GET['t'])) {
-    $prod = $dbh->prepare("INSERT INTO image (nom) VALUES ('test')");
-    $prod->execute();
-    $new = $prod->fetchAll();
+if (isset($_GET['t'])) {
 
-    echo '<pre>';
-    var_dump($new);
-    echo '</pre>';
+    if (isset($_FILES['test'])) {
 
-}
-
-    /*header('Location: index.php');
-}
-
-    /*if (isset($_FILES['test'])) {
-
-        // echo $_FILES['test']['name'] . '<br>'; // Nom du fichier
+        echo $_FILES['test']['name'] . '<br>'; // Nom du fichier
 
         $finfo = finfo_open(FILEINFO_MIME_TYPE); // Vérifie le type MIME du fichier
         $mime = finfo_file($finfo, $_FILES['test']['tmp_name']); // Regarde dans ce fichier le type MIME
@@ -31,9 +19,15 @@ if (isset ($_GET['t'])) {
         $extension = $filename[count($filename) - 1]; // L'extension du fichier
 
 
-//echo $extension . ' ' . $mime;
+echo $extension . ' ' . $mime;
 
-        if ($extension == 'jpg' && $mime == 'image/jpeg') {
+        $prod = $dbh->prepare("INSERT INTO image(nom) VALUES ('test')");
+        $prod->execute();
+        $new = $prod->fetchAll();
+
+        var_dump($new);
+
+        /*if ($extension == 'jpg' && $mime == 'image/jpeg') {
             move_uploaded_file($_FILES['test']['tmp_name'],
                 'Image/' . $_FILES['test']['name']);
             $chemin = 'Image/' . $_FILES['test']['name'];
@@ -43,14 +37,12 @@ if (isset ($_GET['t'])) {
         }
 
 
-        if (!empty($chemin)) {
-            $prod = $dbh->prepare("INSERT INTO image (nom,dates,résolution,taille,types) VALUES (:nom,:dates,:résolution,:taille,:types)");
-            $prod->execute([':nom' => $chemin]);
-            $new = $prod->fetchAll();
-            header('Location: index.php');
-        }
+        if (!empty($chemin)) {*/
+
+
     }
-}*/
+}
+
 ?>
 
 <!doctype html>
@@ -121,10 +113,10 @@ if (isset ($_GET['t'])) {
             </div>
         </div>
         <div class="col l3">
-            <form action="" method="post">
-                <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
-                    <i class="material-icons small">library_add</i>
-                </a>
+            <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
+                <i class="material-icons small">library_add</i>
+            </a>
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal bottom-sheet">

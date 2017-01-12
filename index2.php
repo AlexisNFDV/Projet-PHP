@@ -1,7 +1,56 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('error_reporting', E_ALL);
+
 require 'connect.php';
 
+if (isset ($_GET['t'])) {
+    $prod = $dbh->prepare("INSERT INTO image (nom) VALUES ('test')");
+    $prod->execute();
+    $new = $prod->fetchAll();
+
+    echo '<pre>';
+    var_dump($new);
+    echo '</pre>';
+
+}
+
+    /*header('Location: index.php');
+}
+
+    /*if (isset($_FILES['test'])) {
+
+        // echo $_FILES['test']['name'] . '<br>'; // Nom du fichier
+
+        $finfo = finfo_open(FILEINFO_MIME_TYPE); // Vérifie le type MIME du fichier
+        $mime = finfo_file($finfo, $_FILES['test']['tmp_name']); // Regarde dans ce fichier le type MIME
+        finfo_close($finfo); // Fermeture de la lecture
+
+        $filename = explode('.', $_FILES['test']['name']); // Explosion du nom sur le point
+        $extension = $filename[count($filename) - 1]; // L'extension du fichier
+
+
+//echo $extension . ' ' . $mime;
+
+        if ($extension == 'jpg' && $mime == 'image/jpeg') {
+            move_uploaded_file($_FILES['test']['tmp_name'],
+                'Image/' . $_FILES['test']['name']);
+            $chemin = 'Image/' . $_FILES['test']['name'];
+            echo 'upload done';
+        } else {
+            echo 'format incorrect';
+        }
+
+
+        if (!empty($chemin)) {
+            $prod = $dbh->prepare("INSERT INTO image (nom,dates,résolution,taille,types) VALUES (:nom,:dates,:résolution,:taille,:types)");
+            $prod->execute([':nom' => $chemin]);
+            $new = $prod->fetchAll();
+            header('Location: index.php');
+        }
+    }
+}*/
 ?>
 
 <!doctype html>
@@ -39,7 +88,7 @@ require 'connect.php';
                 <div class="card-content">
                     <div class="row">
                         <div class="col l6">
-                            <p>Date d'ajout</p>
+                            <p>Date d'test</p>
                         </div>
                         <div class="col l6">
                             <p>10/01/2017</p>
@@ -72,8 +121,12 @@ require 'connect.php';
             </div>
         </div>
         <div class="col l3">
-            <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" data-position="top" data-delay="10" data-tooltip="Ajouter une Image"><i class="material-icons small">library_add</i></a>
+            <form action="" method="post">
+                <a class="btn-floating btn-large waves-effect waves-light blue lighten-4 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
+                    <i class="material-icons small">library_add</i>
+                </a>
 
+<<<<<<< HEAD
             <!-- Modal Structure -->
             <div id="modal1" class="modal bottom-sheet">
                 <div class="row">
@@ -89,23 +142,31 @@ require 'connect.php';
                         <div class="input-field col l2">
                             <input id="input_text" type="text" length="25">
                             <label for="input_text">Input text</label>
+=======
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal bottom-sheet">
+                    <div class="row">
+                        <div class="col l5 modal-content">
+                            <h4>Ajouter une image</h4>
+>>>>>>> 5f3639b7b4e2951f768d6565e628cf40ff65364f
                         </div>
-                        <div class="input-field col l7">
-                            <textarea id="textarea1" class="materialize-textarea" length="150"></textarea>
-                            <label for="textarea1">Textarea</label>
+                        <div>
+                            <a href="index2.php?t=1" class="col l5 modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col l3 file-field input-field">
                             <div class="btn">
                                 <span>Image</span>
-                                <input type="file">
+                                <input type="file" name="test" id="test">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" type="text" name="belle" id="belle">
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>-->
+            </form>
         </div>
     </div>
 </div>

@@ -2,20 +2,17 @@
 
 require 'connect.php';
 
-if (!empty($_POST['nom']) && !empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email'])){
+if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email'])){
 
-    $to = 'noel.a@hotmail.fr';
-    /*$name = $nom;*/
-    $subject = $_POST['sujet'];
-    $message = $_POST['message'];
-    $headers = 'From: '.$_POST['email'] ."\r\n" .
-        'Reply-To: alexdu77270@hotmail.fr'."\r\n".
-        'X-Mailer: PHP/'.phpversion();
+     $to      = 'noel.a@hotmail.fr';
+     $subject = $_POST['sujet'];
+     $message = $_POST['message'] && $_POST['email'];
+     $headers = 'From: webmaster@example.com' . "\r\n" .
+         'Reply-To: webmaster@example.com' . "\r\n" .
+         'X-Mailer: PHP/' . phpversion();
 
-    mail($to, $subject, $message, $headers);
-
+     mail($to, $subject, $message, $headers);
     header('Location: index.php');
-
 }
 
 ?>
@@ -51,28 +48,28 @@ if (!empty($_POST['nom']) && !empty($_POST['sujet']) && !empty($_POST['message']
     <div class="form-group">
         <label for="nom" class="col-sm-2 control-label">Nom</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="nom" placeholder="Nom">
+            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom">
         </div>
     </div>
 
     <div class="form-group">
         <label for="sujet" class="col-sm-2 control-label">Sujet</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="sujet" placeholder="Sujet">
+            <input type="text" class="form-control" name="sujet" id="sujet" placeholder="Sujet">
         </div>
     </div>
 
     <div class="form-group">
         <label for="Message" class="col-sm-2 control-label">Message</label>
         <div class="col-sm-10">
-            <textarea class="form-control" rows="3" placeholder="Votre message" id="message"></textarea>
+            <textarea class="form-control" rows="3" placeholder="Votre message" name="message" id="message"></textarea>
         </div>
     </div>
 
     <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email">
         </div>
     </div>
 

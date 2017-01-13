@@ -38,25 +38,15 @@ if(isset($_POST['btn-upload'])) {
         $prod = $dbh->prepare("INSERT INTO image(nom, dates, type, taille) VALUES (:nom, NOW(), :type, :taille)");
         $prod->execute([':nom' => $final_file, ':type' => $file_type, ':taille' => $new_size]);
 
-        $test = $dbh->prepare("SELECT * FROM image");
+        $test = $dbh-> prepare("SELECT * FROM image");
         $test->execute();
+        $test1 = $test->fetchAll();
 
-        foreach ($test as $aller){}
+        header('Location:index2.php?success&amp;id='.$test1['id']);
 
-        ?>
-        <script>
-            window.location.href='index2.php?success';
-        </script>
-
-        <?php
     }
     else
     {
-        ?>
-        <script>
-            window.location.href='index2.php?fail';
-        </script>
-        <?php
+        header('Location:index2.php?fail');
     }
 }
-?>

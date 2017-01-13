@@ -69,12 +69,10 @@ include_once 'connect.php';
 </div>
 
 <?php
-for ($i=0; $i<5; $i++){
     if(isset($_GET['success'])){
         include 'formulaire.php';
     }
-
-}?>
+?>
 
 <footer class="page-footer grey darken-3">
     <div class="container">

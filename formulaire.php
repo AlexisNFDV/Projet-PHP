@@ -8,6 +8,8 @@ $req = $dbh->prepare('SELECT * FROM image WHERE id IN (SELECT MAX(id) FROM image
 $req->execute();
 $result = $req->fetchAll();
 
+foreach ($result as $item) {
+
 ?>
 
 <!DOCTYPE html>
@@ -39,16 +41,11 @@ $result = $req->fetchAll();
                 <div class="card-image">
                     <?php
 
-                    foreach ($result as $item) {
+                    $image = "Image/" . $item['nom'];
 
-                        /*$image = '/Image/'.$item['id'];
-                            readfile($image);*/
+                    print '<img class="materialboxed" data-caption="Nom du fichier" src="' . $image . '" height="200px" width="200px" />';
 
-                        $image = "Image/".$item['nom'];
 
-                        print '<img class="materialboxed" data-caption="Nom du fichier" src="' . $image . '" height="200px" width="200px" />';
-
-                    }
                     ?>
 
                     <span class="card-title">Card Title</span>
@@ -61,11 +58,9 @@ $result = $req->fetchAll();
                         <div class="col l6">
                             <p> <?php
 
-                                foreach ($result as $item){
+                                echo $item['dates'];
 
-                                    echo $item['dates'];
-
-                                }?>
+                                ?>
                             </p>
                         </div>
 
@@ -75,7 +70,15 @@ $result = $req->fetchAll();
                             <p>Résolution</p>
                         </div>
                         <div class="col l6">
-                            <p>200 x 200</p>
+                            <p>
+                                <?php
+
+                                list($width, $height, $type, $attr) = getimagesize("Image/" . $item['nom']);
+
+                                echo "" . $width . '*' . $height;
+
+                                ?>
+                            </p>
                         </div>
 
                     </div>
@@ -86,21 +89,21 @@ $result = $req->fetchAll();
                         <div class="col l6">
                             <p><?php
 
-                                foreach ($result as $item){
+                                echo $item['taille'] . 'KB /' . $item['type'];
 
-                                    echo $item['taille']. 'KB /' .$item['type'];
-
-                                }?>
+                                ?>
                             </p>
                         </div>
 
                     </div>
                 </div>
                 <div class="center card-action">
-                    <a class="waves-effect waves-light btn blue lighten-1 tooltipped" data-position="bottom" data-delay="10" data-tooltip="Modifier">
+                    <a class="waves-effect waves-light btn blue lighten-1 tooltipped" data-position="bottom"
+                       data-delay="10" data-tooltip="Modifier">
                         <i class="material-icons small">mode_edit</i>
                     </a>
-                    <a class="waves-effect waves-light btn red accent-3 tooltipped" data-position="bottom" data-delay="10" data-tooltip="Supression définitive!">
+                    <a class="waves-effect waves-light btn red accent-3 tooltipped" data-position="bottom"
+                       data-delay="10" data-tooltip="Supression définitive!">
                         <i class="material-icons small">delete</i>
                     </a>
                 </div>
@@ -110,6 +113,7 @@ $result = $req->fetchAll();
 </div>
 
 <?php
+}
 }
 else if(isset($_GET['fail']))
 {

@@ -43,12 +43,12 @@ foreach ($result as $item) {
 
                     $image = "Image/" . $item['nom'];
 
-                    print '<img class="materialboxed" data-caption="Nom du fichier" src="' . $image . '" height="200px" width="200px" />';
+                    print '<img class="materialboxed" data-caption='.$item['nom'].' src="' . $image . '" height="200px" width="200px" />';
 
 
                     ?>
 
-                    <span class="card-title">Card Title</span>
+                    <span class="card-title" style="color: black"><?php echo $item['nom']. '/' . $item['id'] ?></span>
                 </div>
                 <div class="card-content">
                     <div class="row">
@@ -73,9 +73,9 @@ foreach ($result as $item) {
                             <p>
                                 <?php
 
-                                list($width, $height, $type, $attr) = getimagesize("Image/" . $item['nom']);
+                                list($width, $height) = getimagesize("Image/" . $item['nom']);
 
-                                echo "" . $width . '*' . $height;
+                                echo "".$width.'*'.$height;
 
                                 ?>
                             </p>
@@ -98,14 +98,15 @@ foreach ($result as $item) {
                     </div>
                 </div>
                 <div class="center card-action">
-                    <a class="waves-effect waves-light btn blue lighten-1 tooltipped" data-position="bottom"
-                       data-delay="10" data-tooltip="Modifier">
-                        <i class="material-icons small">mode_edit</i>
-                    </a>
-                    <a class="waves-effect waves-light btn red accent-3 tooltipped" data-position="bottom"
-                       data-delay="10" data-tooltip="Supression définitive!">
-                        <i class="material-icons small">delete</i>
-                    </a>
+
+                    <button type="submit" name="btn-delete" style="padding: 0;width: 50px;height: 10px;border: none;">
+                        <form action="" method="get" enctype="multipart/form-data">
+                            <?php echo '<a href="delete.php?id='.$item['id'].'" class="waves-effect waves-light btn red accent-3 tooltipped" data-position="bottom"
+                               data-delay="10" data-tooltip="Supression">
+                                <i class="material-icons small">delete</i>
+                            </a>'?>
+                        </form>
+                    </button>
                 </div>
             </div>
         </div>

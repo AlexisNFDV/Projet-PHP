@@ -7,7 +7,7 @@ if(isset($_GET['connect'])){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html xmlns:margin-top="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -31,17 +31,6 @@ if(isset($_GET['connect'])){
 <?php
 require 'header.php';
 ?>
-<div class="container center">
-<ul class="pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active grey darken-4"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-</ul>
-</div>
 
 <div class="container">
     <div class="row">
@@ -52,6 +41,9 @@ require 'header.php';
                     include 'formulaire.php';
                 }
                 ?>
+                <div class="col l4 center swag">
+                    <a class="deep-purple accent-2 waves-effect waves-light btn">Voir tout</a>
+                </div>
             </div>
         </div>
     </div>

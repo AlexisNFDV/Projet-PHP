@@ -90,7 +90,7 @@ foreach ($result as $item) {
             <div class="card-action">
                 <div class="row">
                     <div class="col l6">
-                        <a class="waves-effect waves-light btn blue lighten-1"><i class="material-icons left">system_update_alt</i></a>
+                        <a class="waves-effect waves-light btn blue lighten-1" href=""><i class="material-icons left">system_update_alt</i></a>
                     </div>
                     <div class="col l6">
                         <button type="submit" name="btn-delete" style="padding: 0;width: 50px;height: 10px;border: none;">

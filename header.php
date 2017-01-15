@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col s12 center">
-            <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
+            <a class="deep-purple accent-2 btn-floating btn-large waves-effect waves-light tooltipped" href="#modal1" data-position="top" data-delay="10" data-tooltip="Ajouter une Image">
                 <i class="material-icons large">library_add</i>
             </a>
             <!-- Modal Structure -->

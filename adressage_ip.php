@@ -4,7 +4,7 @@ session_start();
 
 require 'connect.php';
 
-$ip = $_SERVER['REMOTE_ADDR'];
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 
 $req = $dbh->prepare('SELECT * FROM users WHERE ip = :ip');
 $req->execute([':ip' => $ip]);
@@ -14,7 +14,7 @@ $users = $req->fetchAll();
 if(count($users) > 0) {
 
     $_SESSION['connected'] = true;
-    $_SESSION['id'] = $users[0]['id'];
+    $_SESSION['ip'] = $users[0]['ip'];
     header('Location:index2.php?connect&success');
 }
 else{

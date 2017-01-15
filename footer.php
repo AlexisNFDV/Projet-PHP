@@ -1,4 +1,4 @@
-<footer class="page-footer grey darken-3">
+<footer class="page-footer grey darken-3" style="bottom: 0">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -15,7 +15,7 @@
     </div>
     <div class="footer-copyright grey darken-4">
         <div class="container">
-            © 2017 Copyright Text
+            8GAG © 2017 Copyright Text
             <a class="grey-text text-lighten-4 right" href="contact.php">Nous contacter</a>
         </div>
     </div>

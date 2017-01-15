@@ -91,7 +91,7 @@ include_once 'connect.php';
     </div>
     <div class="footer-copyright grey darken-4">
         <div class="container">
-            © 2017 Copyright Text
+            8GAG © 2017 Copyright Text
             <a class="grey-text text-lighten-4 right" href="contact.php">Nous contactez</a>
         </div>
     </div>

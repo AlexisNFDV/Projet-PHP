@@ -1,18 +1,9 @@
-body {
+body{
     background-image:url(../Image/background.png);
     background-repeat: repeat;
 }
 
-#contact
-{
-    position: absolute;
-    top: 25%;
-    right: 4.5%;
-    color: white;
-    font-size:18px;
-}
-
-#tyu {
+#tyu{
     font-family: 'Orbitron', cursive;
 }
 
@@ -29,4 +20,8 @@ body {
 
 .mar{
     margin-top: 0px;
+}
+
+.yolo{
+    margin-top: 10px;
 }

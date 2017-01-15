@@ -26,10 +26,12 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!--Icons Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
@@ -41,66 +43,93 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 <body>
 
 <header>
-    <h1 class="ent text-center">8GAG</h1>
+    <h1 class="ent center"><a href="index2.php">8GAG</a></h1>
 </header>
 
-<form class="form-horizontal" action="" method="post">
-    <div class="form-group">
-        <label for="nom" class="col-sm-2 control-label">Nom</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom">
+<!-- formulaire de contact -->
+
+<div class="row container">
+    <form class="col l12" action="" method="post">
+        <div class="row">
+            <!-- Nom -->
+            <div class="input-field col s6">
+                <input type="text" class="validate" name="nom" id="nom">
+                <label for="nom">Nom</label>
+            </div>
+            <!-- Sujet -->
+            <div class="input-field col s6">
+                <input type="text" class="validate" name="sujet" id="sujet">
+                <label for="sujet" >Sujet</label>
+            </div>
+        </div>
+        <!-- Message -->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea class="materialize-textarea" rows="3" name="message" id="message"></textarea>
+                <label for="Message">Message</label>
+            </div>
+        </div>
+        <!-- Mail -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="email" class="validate" name="email" id="inputEmail3">
+                <label for="inputEmail3">Email</label>
+            </div>
+        </div>
+        <!-- Avis -->
+        <div class="row">
+            <div class="input-field col s6">
+                <select id="avis">
+                    <option value="" disabled selected>Commen trouver vous le site ?</option>
+                    <option value="1">Très bon :)</option>
+                    <option value="2">Bon</option>
+                    <option value="3">Sans avis</option>
+                    <option value="4">Mauvais</option>
+                    <option value="5">Très mauvais :'(</option>
+                </select>
+                <label for="avis">Votre avis nous intéresse !</label>
+            </div>
+            <!-- Btn envoyer -->
+            <div class=" center col s6">
+                <button type="submit" class="btn btn-default yolo">Envoyer votre message</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer class="page-footer grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 id="tyu" class="white-text">8GAG</h5>
+                <p class="grey-text text-lighten-4">WebMaster Alexis Noel et Benoît Dillies.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Liens</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/AlexisNFDV/Projet-PHP" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="sujet" class="col-sm-2 control-label">Sujet</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" name="sujet" id="sujet" placeholder="Sujet">
+    <div class="footer-copyright grey darken-4">
+        <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="contact.php">Nous contactez</a>
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="Message" class="col-sm-2 control-label">Message</label>
-        <div class="col-sm-10">
-            <textarea class="form-control" rows="3" placeholder="Votre message" name="message" id="message"></textarea>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="avis" class="col-sm-2 control-label">Notre site est : </label>
-        <div class="col-sm-10">
-            <select class="form-control" id="avis">
-                <option>Très bien</option>
-                <option>Bien</option>
-                <option>Améliorable</option>
-                <option>Mal fait</option>
-                <option>Très mal fait</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Envoyer</button>
-        </div>
-    </div>
-</form>
-
-
-
-<footer>
-    <?php echo '<p class="copyright"> © Copyright 2016 </p>' ?>
 </footer>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </body>
+
+<!--Materialize -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>
+
 </html>

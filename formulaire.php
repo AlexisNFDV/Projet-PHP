@@ -1,6 +1,17 @@
 <?php
 
+session_start();
+
 include_once 'connect.php';
+
+if(isset($_GET['connect']) && isset($_GET['success'])) {
+
+    $test = $dbh->prepare('SELECT * FROM image WHERE EXISTS ( SELECT * FROM users WHERE ip = :ip)');
+    $test->execute([':ip' => $_SESSION['id']]);
+    $test1 = $test->fetchAll();
+
+}
+
 
 if(isset($_GET['success'])){
 

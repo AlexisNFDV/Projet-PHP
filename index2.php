@@ -1,25 +1,9 @@
 <?php
 
-//session_start();
-
 include_once 'connect.php';
 
-/*include_once 'adressage_ip.php';
+if(isset($_GET['connect'])){
 
-    $req = $dbh->prepare('SELECT * FROM users WHERE ip = :ip');
-    $req->execute([':ip' => $_SERVER['REMOTE_ADDR']]);
-
-    $users = $req->fetchAll();
-
-    if(count($users) > 0) {
-
-        $_SESSION['connected'] = true;
-        $_SESSION['id'] = $users[0]['id'];
-        header('Location: http://localhost/PHP/8gag/Projet-PHP/index2.php?connected');
-    }
-    else{
-        header('Location: http://localhost/PHP/8gag/Projet-PHP/index2.php');
-    }*/
 ?>
 
 <!DOCTYPE html>
@@ -78,3 +62,4 @@ require 'footer.php';
 
 </html>
 
+<?php }?>

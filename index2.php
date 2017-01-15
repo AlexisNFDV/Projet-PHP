@@ -1,19 +1,25 @@
 <?php
 
+//session_start();
+
 include_once 'connect.php';
 
-/*$connexion = $dbh->prepare('SELECT * FROM image');
-$connexion -> execute();
-$test = $connexion->fetchAll();
+/*include_once 'adressage_ip.php';
 
-$ip = $_SERVER['REMOTE_ADDR'];
+    $req = $dbh->prepare('SELECT * FROM users WHERE ip = :ip');
+    $req->execute([':ip' => $_SERVER['REMOTE_ADDR']]);
 
-if($ip === $test['ip']){
+    $users = $req->fetchAll();
 
-    header('Location:index2.php?ip='.$test['ip']);
+    if(count($users) > 0) {
 
-}*/
-
+        $_SESSION['connected'] = true;
+        $_SESSION['id'] = $users[0]['id'];
+        header('Location: http://localhost/PHP/8gag/Projet-PHP/index2.php?connected');
+    }
+    else{
+        header('Location: http://localhost/PHP/8gag/Projet-PHP/index2.php');
+    }*/
 ?>
 
 <!DOCTYPE html>

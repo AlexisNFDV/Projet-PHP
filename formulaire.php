@@ -4,7 +4,7 @@ include_once 'connect.php';
 
 if(isset($_GET['success'])){
 
-$req = $dbh->prepare('SELECT * FROM image WHERE id IN (SELECT MAX(id) FROM image GROUP BY id)ORDER BY id;');
+$req = $dbh->prepare('SELECT * FROM image WHERE id IN (SELECT MAX(id) FROM image GROUP BY id)ORDER BY id DESC LIMIT 5;');
 $req->execute();
 $result = $req->fetchAll();
 
@@ -48,7 +48,7 @@ foreach ($result as $item) {
 
                     ?>
 
-                    <span class="card-title" style="color: black"><?php echo $item['nom']. '/' . $item['id'] ?></span>
+                    <span class="card-title" style="color: black"><?php echo $item['nom'] ?></span>
                 </div>
                 <div class="card-content">
                     <div class="row">

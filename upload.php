@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once 'connect.php';
 
 if(isset($_POST['btn-upload'])) {
@@ -7,8 +9,6 @@ if(isset($_POST['btn-upload'])) {
     $file = rand(1000,100000)."-".$_FILES['file']['name'];
     $file_loc = $_FILES['file']['tmp_name'];
     $file_size = $_FILES['file']['size'];
-    $file_type = $_FILES['file']['type'];
-    $folder="uploads/";
 
     // définis la taille du fichier en KB
     $new_size = $file_size/1024;
@@ -27,7 +27,7 @@ if(isset($_POST['btn-upload'])) {
 
     //echo $extension . ' ' . $mime;
 
-    if ($extension == 'jpg' && $mime == 'image/jpeg') {
+    if ([$extension == 'jpg' && $mime == 'image/jpeg'] || [$extension == 'png' && $mime == 'image/png'] || [$extension == 'gif' && $mime == 'image/gif']) {
         move_uploaded_file($_FILES['file']['tmp_name'],
             'Image/' . $final_file);
         $chemin = 'Image/' . $final_file;
@@ -35,14 +35,12 @@ if(isset($_POST['btn-upload'])) {
 
 
     if (!empty($chemin)) {
-        $prod = $dbh->prepare("INSERT INTO image(nom, dates, type, taille) VALUES (:nom, NOW(), :type, :taille)");
-        $prod->execute([':nom' => $final_file, ':type' => $file_type, ':taille' => $new_size]);
 
-        $test = $dbh-> prepare("SELECT * FROM image");
-        $test->execute();
-        $test1 = $test->fetchAll();
+        $prod = $dbh->prepare("INSERT INTO image(nom, dates, type, taille, ip) VALUES (:nom, :dates, :type, :taille, :ip)");
+        $prod->execute([':nom' => $final_file, ':dates' => date("d-m-Y H:i:s") ,':type' => $extension, ':taille' => $new_size, ':ip' => $_SERVER['REMOTE_ADDR']]);
 
-        header('Location:index2.php?success&amp;id='.$test1['id']);
+
+        header("Location:index2.php?connect&success");
 
     }
     else

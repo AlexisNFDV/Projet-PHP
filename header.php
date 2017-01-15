@@ -1,5 +1,5 @@
 <header>
-    <h1 class="center ent">8GAG</h1>
+    <a href="connexion.php" style="color: black"><h1 class="center ent">8GAG</h1></a>
 </header>
 
 <div class="container">

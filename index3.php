@@ -2,8 +2,6 @@
 
 include_once 'connect.php';
 
-ini_set("display_errors",0);error_reporting(0);
-
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +28,6 @@ ini_set("display_errors",0);error_reporting(0);
 
 <?php
 require 'header.php';
-
-if(isset($_GET['connect'])){
 ?>
 
 <div class="container">
@@ -40,21 +36,8 @@ if(isset($_GET['connect'])){
             <div class="row">
                 <?php
 
-                if(isset($_GET['success'])){
 
-                    include 'formulaire.php';
-                }
-
-                $abs = $dbh->prepare('SELECT id FROM image');
-                $abs->execute();
-                $bas = $abs->fetchAll();
-
-                        if ($bas[4]['id'] >= 5) {
-                            echo '
-                    <div class="col l4 center swag">
-                    <a href = "index3.php" class="deep-purple accent-2 waves-effect waves-light btn" > Voir tout </a>
-                    </div> ';
-                        }
+                    include 'formulaire2.php';
 
                 ?>
             </div>
@@ -63,7 +46,6 @@ if(isset($_GET['connect'])){
 </div>
 
 <?php
-}
 require 'footer.php';
 ?>
 </body>

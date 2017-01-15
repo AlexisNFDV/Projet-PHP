@@ -37,7 +37,7 @@ if(isset($_POST['btn-upload'])) {
     if (!empty($chemin)) {
 
         $prod = $dbh->prepare("INSERT INTO image(nom, dates, type, taille, ip) VALUES (:nom, :dates, :type, :taille, :ip)");
-        $prod->execute([':nom' => $final_file, ':dates' => date("d-m-Y H:i:s") ,':type' => $extension, ':taille' => $new_size, ':ip' => $_SERVER['REMOTE_ADDR']]);
+        $prod->execute([':nom' => $final_file, ':dates' => date("d-m-Y") ,':type' => $extension, ':taille' => $new_size, ':ip' => $_SERVER['REMOTE_ADDR']]);
 
 
         header("Location:index2.php?connect&success");

@@ -43,7 +43,7 @@ if (!empty($_POST['sujet']) && !empty($_POST['message']) && !empty($_POST['email
 <body>
 
 <header>
-    <h1 class="ent center"><a href="index2.php">8GAG</a></h1>
+    <h1 class="ent center"><a href="connexion.php" style="color: black">8GAG</a></h1>
 </header>
 
 <!-- formulaire de contact -->

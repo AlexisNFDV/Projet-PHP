@@ -4,8 +4,8 @@ Pour lancer le site :
 
 En local : 
 
-- Importer la base de données "projet-php"
-- Lancer le fichier connexion.php
+- Importer la base de données "projet-php.sql"
+- Lancer votre serveur local puis ouvrer dans votre naviguateur connexion.php
 
 En ligne : 
 

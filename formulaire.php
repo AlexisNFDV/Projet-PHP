@@ -89,8 +89,19 @@ foreach ($result as $item) {
             </div>
             <div class="card-action">
                 <div class="row">
+                    <?php
+                    $filename = $item['nom'];
+                    $dir= "http://localhost/PHP/8gag/Projet-PHP/Image/".$filename;
+                    ?>
+
                     <div class="col l6">
-                        <a class="waves-effect waves-light btn blue lighten-1" href=""><i class="material-icons left">system_update_alt</i></a>
+                        <button type="submit" name="btn-delete" style="padding: 0;width: 50px;height: 10px;border: none;">
+                            <form action="" method="get" enctype="multipart/form-data">
+                                <?php echo '<a href="download.php?filename='.$item['nom'].'" class="waves-effect waves-light btn blue lighten-1">
+                                <i class="material-icons left">system_update_alt</i>
+                                </a>'?>
+                            </form>
+                        </button>
                     </div>
                     <div class="col l6">
                         <button type="submit" name="btn-delete" style="padding: 0;width: 50px;height: 10px;border: none;">

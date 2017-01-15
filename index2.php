@@ -2,6 +2,8 @@
 
 include_once 'connect.php';
 
+ini_set("display_errors",0);error_reporting(0);
+
 ?>
 
 <!DOCTYPE html>
@@ -42,10 +44,19 @@ if(isset($_GET['connect'])){
 
                     include 'formulaire.php';
                 }
+
+                $abs = $dbh->prepare('SELECT id FROM image');
+                $abs->execute();
+                $bas = $abs->fetchAll();
+
+                        if ($bas[4]['id'] >= 5) {
+                            echo '
+                    <div class="col l4 center swag">
+                    <a href = "all_images.php" class="deep-purple accent-2 waves-effect waves-light btn" > Voir tout </a>
+                    </div> ';
+                        }
+
                 ?>
-                <div class="col l4 center swag">
-                    <a href="all_images.php" class="deep-purple accent-2 waves-effect waves-light btn">Voir tout</a>
-                </div>
             </div>
         </div>
     </div>

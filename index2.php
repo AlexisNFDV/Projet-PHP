@@ -28,6 +28,8 @@ include_once 'connect.php';
 
 <?php
 require 'header.php';
+
+if(isset($_GET['connect'])){
 ?>
 
 <div class="container">
@@ -37,13 +39,12 @@ require 'header.php';
                 <?php
 
                 if(isset($_GET['success'])){
+
                     include 'formulaire.php';
                 }
                 ?>
                 <div class="col l4 center swag">
-
                     <a href="all_images.php" class="deep-purple accent-2 waves-effect waves-light btn">Voir tout</a>
-
                 </div>
             </div>
         </div>
@@ -51,6 +52,7 @@ require 'header.php';
 </div>
 
 <?php
+}
 require 'footer.php';
 ?>
 </body>
